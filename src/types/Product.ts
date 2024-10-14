@@ -1,9 +1,31 @@
-// src/types/Product.ts
-export interface Product {
+
+// Định nghĩa interface Product và Price
+export interface Price {
   id: number; 
-  name: string;
-  description?: string; // Mô tả sản phẩm, có thể không có
-  imageUrl?: string; 
-  unitPrice?: string; 
-  packaging?: string; 
+  measureUnitCode: number; 
+  measureUnitName: string; 
+  isSellDefault: boolean; 
+  price: number; 
+  currencySymbol: string; 
+  isDefault: boolean; 
+  inventory: number;
+  isInventory: boolean; 
+  level: number; 
 }
+
+export interface Product {
+  sku: string; 
+  name: string;
+  shortDescription?: string; 
+  image: string; 
+  prices: Price[]; 
+  brand: string; 
+  productRanking: number; 
+  displayCode: number; 
+  specification: string; 
+  category?: {
+    id: number;
+    name: string; 
+    parentName?: string; 
+    level: number; 
+  }[]; }

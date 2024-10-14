@@ -4,7 +4,7 @@
 /* Trong file globals.css */
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -20,11 +20,22 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica,'Inter', sans-serif,;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+.text-text-primary {
+  color: #333;
+}
+::marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0px !important;
+  text-align: start !important;
+  text-align-last: start !important;
 }
